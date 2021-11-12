@@ -74,7 +74,6 @@ public:
     }
 };
 
-//adds a item into end of the list
 template <typename T>
 void LinkedList<T>:: push_back(T dat)
 {
@@ -98,7 +97,6 @@ const T LinkedList<T>:: back() const
     return tail->data;
 }
 
-//adds an item to front of list
 template <typename T>
 void LinkedList<T>:: push_front(T dat)
 {
@@ -129,7 +127,6 @@ int LinkedList<T>:: size()
 }
 
 
-//reverses the list
 template <typename T>
 void LinkedList<T>:: reverse()
 {
@@ -153,53 +150,5 @@ void LinkedList<T>:: reverse()
         current = future_next;
     }
 }
-
-// struct node
-// {
-// public:
-//     T data;
-//     node* next;
-//     node* previous;
-//
-//     //constructors
-//     node():next(nullptr),previous(nullptr)
-//     {
-//     }
-//     node(T d):data(d),next(nullptr),previous(nullptr)
-//     {
-//     }
-// };
-// struct dataNode : node {
-//     int data;
-// };
-//
-// node* head = nullptr;
-// node* tail = nullptr;
-//
-// public:
-// class iterator
-// {
-//   friend class List;
-//
-// public:
-//   iterator(node* nnode) : m_node(nnode) {}
-//
-//   iterator() : m_node(0) {}
-//
-//   iterator& operator ++() {
-//       m_node = m_node->next;
-//       return *this;
-//   }
-//
-//   int& operator * () {
-//       // Note: Dereferncing the end (sentinal node) is undefined behavior.
-//       return reinterpret_cast<dataNode*>(m_node)->data;
-//     }
-//     bool operator==(iterator b) const { return m_node == b.m_node; }
-//     bool operator!=(iterator b) const { return m_node != b.m_node; }
-//
-//     node* m_node;
-// };
-// do not edit below this line
 
 #endif

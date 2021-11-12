@@ -22,9 +22,7 @@ public:
         unique_ptr<TreeNode<T>> leftChild, rightChild;
         TreeNode<T> *parent;
         TreeNode(const T & dataIn)
-            : data(dataIn), parent(nullptr) {
-
-        }
+            : data(dataIn), parent(nullptr) {}
 
           void setLeftChild(TreeNode<T>* child) {
             child->parent = this;
@@ -48,7 +46,6 @@ public:
           }
 
           int maxDepth() {
-
             int left = -1;
             int right = -1;
             if (leftChild == nullptr && rightChild == nullptr) {

@@ -30,10 +30,10 @@ class CovidCase{
     }
     CovidCase(string input){
       vector<string> result;
-        stringstream s_stream(input); //create string stream from the string
+        stringstream s_stream(input);
         while(s_stream.good()) {
           string substr;
-          getline(s_stream, substr, ','); //get first string delimited by comma
+          getline(s_stream, substr, ',');
           s_stream.ignore();
           result.push_back(substr);
         }
@@ -52,7 +52,6 @@ class CovidCase{
   }
     friend ostream& operator<<(ostream& os, const CovidCase& cc);
 
-    // Getters
     double getLatitude() {
       return latitude;
     }
